@@ -1,6 +1,6 @@
 {
   "name": "dsh-prompt-library",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "DeepSeek Harness 常用指令库：一份写好中文提示词的清单，搜一下、点一下就能填进输入框，给不熟悉怎么写提示词的人用。",
   "keywords": [
@@ -19,8 +19,8 @@
   },
   "files": [
     "index.js",
-    "lib/library.js",
-    "lib/client.js",
+    "cordis.patch.yml",
+    "lib",
     "README.md",
     "README.zh.md",
     "LICENSE"
@@ -37,6 +37,9 @@
     "url": "git+https://github.com/ciceroyang/dsh-prompt-library.git"
   },
   "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "platform": "web",
       "immediately": true

@@ -23,7 +23,21 @@ obvious placeholder to replace.
 
 ## Install
 
-    dsh plugin --profile web add github:ciceroyang/dsh-prompt-library#v0.1.0
+    dsh plugin --profile web add github:ciceroyang/dsh-prompt-library#v0.1.1
+
+One command installs the package and mounts it: the manifest declares `dsh.bundle`, so the
+profile adds the package to its loader tree, and the browser half is served from
+`exports["./client"]`.
+
+From a local checkout instead, mount it by hand:
+
+    ln -sfn "$PWD/dsh-prompt-library" ~/.dsh/profiles/web/node_modules/dsh-prompt-library
+    # then in ~/.dsh/profiles/web/cordis.patch.yml
+    - insert:
+        - id: prompt-library
+          name: dsh-prompt-library
+
+The web profile reloads the patch live; refresh the page afterwards.
 
 ## Use
 
