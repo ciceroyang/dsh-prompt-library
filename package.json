@@ -1,0 +1,45 @@
+{
+  "name": "dsh-prompt-library",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "DeepSeek Harness 常用指令库：一份写好中文提示词的清单，搜一下、点一下就能填进输入框，给不熟悉怎么写提示词的人用。",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "prompt",
+    "prompt-library",
+    "中文",
+    "agent"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/library.js",
+    "lib/client.js",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciceroyang/dsh-prompt-library.git"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
